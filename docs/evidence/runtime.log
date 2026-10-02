@@ -1,0 +1,40 @@
+INFO:     Started server process [5]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8770 (Press CTRL+C to quit)
+INFO:     127.0.0.1:35968 - "GET /health HTTP/1.1" 200 OK
+2026-10-02 08:52:27,883 INFO gateway request id=b02e1f91e9834d10a2e10af831dc752b method=GET path=/health status=200 duration_ms=1.37
+INFO:     127.0.0.1:35976 - "POST /api/v1/chat/stream HTTP/1.1" 200 OK
+2026-10-02 08:52:28,886 INFO gateway request id=837d04bfe16147ad8f54771f8695f91b method=POST path=/api/v1/chat/stream status=200 duration_ms=843.51
+INFO:     127.0.0.1:35976 - "POST /api/v1/documents HTTP/1.1" 202 Accepted
+2026-10-02 08:52:28,900 INFO gateway request id=5c34db39f7c740329b438e3c43ffd2b0 method=POST path=/api/v1/documents status=202 duration_ms=8.16
+2026-10-02 08:52:28,901 INFO app.extraction extraction_started id=3b67c3f1-49f9-4c12-be4f-9acb97fe2933
+INFO:     127.0.0.1:35976 - "GET /api/v1/documents/3b67c3f1-49f9-4c12-be4f-9acb97fe2933 HTTP/1.1" 200 OK
+2026-10-02 08:52:28,909 INFO gateway request id=225402ee7c4e4c90be8521823da94ff9 method=GET path=/api/v1/documents/3b67c3f1-49f9-4c12-be4f-9acb97fe2933 status=200 duration_ms=3.31
+INFO:     127.0.0.1:35976 - "GET /api/v1/documents/3b67c3f1-49f9-4c12-be4f-9acb97fe2933 HTTP/1.1" 200 OK
+2026-10-02 08:52:28,944 INFO gateway request id=0493a3a59b5e4d25b389cb81cda1876a method=GET path=/api/v1/documents/3b67c3f1-49f9-4c12-be4f-9acb97fe2933 status=200 duration_ms=3.58
+INFO:     127.0.0.1:35976 - "GET /api/v1/documents/3b67c3f1-49f9-4c12-be4f-9acb97fe2933 HTTP/1.1" 200 OK
+2026-10-02 08:52:28,978 INFO gateway request id=731d67719dc24ef88522c712774fefc0 method=GET path=/api/v1/documents/3b67c3f1-49f9-4c12-be4f-9acb97fe2933 status=200 duration_ms=1.56
+INFO:     127.0.0.1:35976 - "GET /api/v1/documents/3b67c3f1-49f9-4c12-be4f-9acb97fe2933 HTTP/1.1" 200 OK
+2026-10-02 08:52:29,011 INFO gateway request id=fb93c954936b4acd903df885232b9d4a method=GET path=/api/v1/documents/3b67c3f1-49f9-4c12-be4f-9acb97fe2933 status=200 duration_ms=1.61
+INFO:     127.0.0.1:35976 - "GET /api/v1/documents/3b67c3f1-49f9-4c12-be4f-9acb97fe2933 HTTP/1.1" 200 OK
+2026-10-02 08:52:29,045 INFO gateway request id=7b4b837a91734148b41e538942f0da99 method=GET path=/api/v1/documents/3b67c3f1-49f9-4c12-be4f-9acb97fe2933 status=200 duration_ms=1.58
+INFO:     127.0.0.1:35976 - "GET /api/v1/documents/3b67c3f1-49f9-4c12-be4f-9acb97fe2933 HTTP/1.1" 200 OK
+2026-10-02 08:52:29,079 INFO gateway request id=15dd70c13d7f4111bab97ed6676b0c9b method=GET path=/api/v1/documents/3b67c3f1-49f9-4c12-be4f-9acb97fe2933 status=200 duration_ms=1.83
+INFO:     127.0.0.1:35976 - "GET /api/v1/documents/3b67c3f1-49f9-4c12-be4f-9acb97fe2933 HTTP/1.1" 200 OK
+2026-10-02 08:52:29,113 INFO gateway request id=bd81b92111a7487399194a8cf5179a3e method=GET path=/api/v1/documents/3b67c3f1-49f9-4c12-be4f-9acb97fe2933 status=200 duration_ms=1.54
+INFO:     127.0.0.1:35976 - "GET /api/v1/documents/3b67c3f1-49f9-4c12-be4f-9acb97fe2933 HTTP/1.1" 200 OK
+2026-10-02 08:52:29,146 INFO gateway request id=82bccceb5b5f421d8bdea5f5d94eab70 method=GET path=/api/v1/documents/3b67c3f1-49f9-4c12-be4f-9acb97fe2933 status=200 duration_ms=1.38
+2026-10-02 08:52:29,162 INFO app.extraction extraction_ready id=3b67c3f1-49f9-4c12-be4f-9acb97fe2933 units=1
+INFO:     127.0.0.1:35976 - "GET /api/v1/documents/3b67c3f1-49f9-4c12-be4f-9acb97fe2933 HTTP/1.1" 200 OK
+2026-10-02 08:52:29,178 INFO gateway request id=ed0fb4a5c6254c3795f63a4eb1fa4fff method=GET path=/api/v1/documents/3b67c3f1-49f9-4c12-be4f-9acb97fe2933 status=200 duration_ms=1.30
+INFO:     127.0.0.1:35976 - "POST /api/v1/chat HTTP/1.1" 200 OK
+2026-10-02 08:52:29,812 INFO gateway request id=cbb7ce70b8cb4f5ebb1beb426964f5d2 method=POST path=/api/v1/chat status=200 duration_ms=632.83
+INFO:     127.0.0.1:35976 - "DELETE /api/v1/documents/3b67c3f1-49f9-4c12-be4f-9acb97fe2933 HTTP/1.1" 204 No Content
+2026-10-02 08:52:29,817 INFO gateway request id=0724b5c6d22142da97fc376a68f19715 method=DELETE path=/api/v1/documents/3b67c3f1-49f9-4c12-be4f-9acb97fe2933 status=204 duration_ms=2.38
+INFO:     127.0.0.1:35986 - "GET /openapi.json HTTP/1.1" 200 OK
+2026-10-02 08:52:29,892 INFO gateway request id=469ee62a596b43e0a5b5b53b1b4086f0 method=GET path=/openapi.json status=200 duration_ms=24.65
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [5]

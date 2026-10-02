@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="vi">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>StudyGateway · Trợ lý học tập</title><link rel="stylesheet" href="/static/style.css"><script src="/static/app.js" defer></script></head>
+<body>
+<aside>
+  <a class="brand" href="/">Study<span>Gateway</span><small>AI ASSISTANT API</small></a>
+  <label for="api-key">Khóa truy cập gateway</label><input id="api-key" type="password" autocomplete="off" placeholder="Nhập X-API-Key">
+  <button id="connect" class="secondary">Kết nối</button><p id="connection" role="status">Nhập khóa trong cấu hình .env</p>
+  <div class="section-title">Thư viện tài liệu <button id="refresh" aria-label="Làm mới danh sách">↻</button></div>
+  <label class="upload" for="file">＋ Thêm tài liệu<small>PDF có text · PPTX · TXT / tối đa 20 MiB</small></label>
+  <input id="file" type="file" accept=".pdf,.pptx,.txt" hidden>
+  <p class="hint">Chọn tài liệu đã sẵn sàng để đưa vào câu hỏi.</p><div id="documents"></div>
+  <a class="docs-link" href="/docs" target="_blank" rel="noopener">Tài liệu API ↗</a>
+</aside>
+<main>
+  <header><div><span class="eyebrow">KHÔNG GIAN HỌC TẬP</span><h1>Hỏi đáp cùng tài liệu</h1></div><span id="mode" class="mode">Đang kiểm tra</span></header>
+  <section id="intro"><h2>Một câu hỏi. Một hướng đi rõ hơn.</h2><p>Tải bài giảng lên, chọn tài liệu rồi đặt câu hỏi. Nội dung được gửi theo luồng để bạn đọc ngay khi câu trả lời bắt đầu.</p><div class="suggestions"><button data-prompt="Giải thích async và await trong FastAPI">Hiểu async và await</button><button data-prompt="Tóm tắt nội dung chính của tài liệu đã chọn">Tóm tắt bài giảng</button></div></section>
+  <div id="messages" aria-live="polite"></div>
+  <form id="chat-form"><div class="composer"><label class="sr-only" for="question">Câu hỏi</label><textarea id="question" maxlength="4000" rows="3" placeholder="Bạn muốn tìm hiểu điều gì?" required></textarea><div class="composer-tools"><label for="task">Chế độ</label><select id="task"><option value="answer">Hỏi đáp</option><option value="summarize">Tóm tắt trích đoạn</option></select><button id="stop" type="button" class="secondary" hidden>Dừng</button><button id="send" type="submit">Gửi câu hỏi ↗</button></div></div><p class="footnote">AI có thể trả lời sai. Kiểm tra lại với tài liệu gốc. Tóm tắt chỉ bao gồm các trích đoạn trong giới hạn ngữ cảnh.</p></form>
+  <div id="toast" role="alert"></div>
+</main></body></html>

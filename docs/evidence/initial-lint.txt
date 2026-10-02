@@ -1,0 +1,76 @@
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_api.py:132:25
+    |
+131 | def test_blank_pdf_reports_ocr_limit(client):
+132 |     writer = PdfWriter(); writer.add_blank_page(width=400, height=400)
+    |                         ^
+133 |     buffer = io.BytesIO(); writer.write(buffer)
+134 |     response = client.post("/api/v1/documents", files={"file": ("scan.pdf", buffer.getvalue(), "application/pdf")})
+    |
+
+E702 Multiple statements on one line (semicolon)
+   --> tests/test_api.py:133:26
+    |
+131 | def test_blank_pdf_reports_ocr_limit(client):
+132 |     writer = PdfWriter(); writer.add_blank_page(width=400, height=400)
+133 |     buffer = io.BytesIO(); writer.write(buffer)
+    |                          ^
+134 |     response = client.post("/api/v1/documents", files={"file": ("scan.pdf", buffer.getvalue(), "application/pdf")})
+135 |     doc = wait_document(client, response.json()["id"])
+    |
+
+E702 Multiple statements on one line (semicolon)
+  --> tests/test_store_extraction.py:23:44
+   |
+21 | @pytest.mark.asyncio
+22 | async def test_store_roundtrip(tmp_path):
+23 |     store = Store(tmp_path / "test.sqlite"); await store.init()
+   |                                            ^
+24 |     await store.create("id", "owner", "test.txt", "txt", tmp_path / "test.txt", 10)
+25 |     await store.finish("id", [{"unit": 1, "text": "Xin chào"}])
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> tests/test_store_extraction.py:39:35
+   |
+38 | def test_extraction_text_limit(tmp_path):
+39 |     path = tmp_path / "lesson.txt"; path.write_text("x" * 1001)
+   |                                   ^
+40 |     with pytest.raises(ValueError):
+41 |         extract(str(path), "txt", 80, 1000)
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> tests/test_store_extraction.py:46:25
+   |
+44 | def test_encrypted_pdf(tmp_path):
+45 |     from pypdf import PdfWriter
+46 |     writer = PdfWriter(); writer.add_blank_page(width=100, height=100); writer.encrypt("secret")
+   |                         ^
+47 |     path = tmp_path / "locked.pdf"; writer.write(path)
+48 |     with pytest.raises(ValueError, match="mật khẩu"):
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> tests/test_store_extraction.py:46:71
+   |
+44 | def test_encrypted_pdf(tmp_path):
+45 |     from pypdf import PdfWriter
+46 |     writer = PdfWriter(); writer.add_blank_page(width=100, height=100); writer.encrypt("secret")
+   |                                                                       ^
+47 |     path = tmp_path / "locked.pdf"; writer.write(path)
+48 |     with pytest.raises(ValueError, match="mật khẩu"):
+   |
+
+E702 Multiple statements on one line (semicolon)
+  --> tests/test_store_extraction.py:47:35
+   |
+45 |     from pypdf import PdfWriter
+46 |     writer = PdfWriter(); writer.add_blank_page(width=100, height=100); writer.encrypt("secret")
+47 |     path = tmp_path / "locked.pdf"; writer.write(path)
+   |                                   ^
+48 |     with pytest.raises(ValueError, match="mật khẩu"):
+49 |         extract(str(path), "pdf", 80, 1000)
+   |
+
+Found 7 errors.

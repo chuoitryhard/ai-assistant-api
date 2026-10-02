@@ -1,0 +1,13 @@
+services:
+  gateway:
+    build: .
+    ports:
+      - "127.0.0.1:8000:8000"
+    env_file: .env
+    volumes:
+      - gateway-data:/srv/data
+    environment:
+      DATA_DIR: /srv/data
+    restart: unless-stopped
+volumes:
+  gateway-data:

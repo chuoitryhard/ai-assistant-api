@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.173" timestamp="2026-10-02T08:48:01.025589-05:00" hostname="3231ff384cb0"><testcase classname="tests.test_api" name="test_oversized_first_chunk_rejected" time="0.110"><failure message="assert 200 == 502&#10; +  where 200 = &lt;Response [200 OK]&gt;.status_code">client = &lt;starlette.testclient.TestClient object at 0x7fb285c52a20&gt;
+
+    def test_oversized_first_chunk_rejected(client):
+        class Oversized:
+            async def stream(self, *_):
+                yield "x" * 60_001
+    
+        client.app.dependency_overrides[get_provider] = lambda: Oversized()
+        try:
+            response = client.post("/api/v1/chat/stream", json={"question": "hello"})
+&gt;           assert response.status_code == 502
+E           assert 200 == 502
+E            +  where 200 = &lt;Response [200 OK]&gt;.status_code
+
+tests/test_api.py:175: AssertionError</failure></testcase></testsuite></testsuites>

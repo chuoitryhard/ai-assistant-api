@@ -1,0 +1,9 @@
+FastAPI lesson
+
+FastAPI is a Python web framework for building APIs using type hints.
+Pydantic models validate request data and describe response schemas.
+Depends injects shared configuration, authentication and storage services.
+An async endpoint can await network I/O through httpx.AsyncClient.
+Blocking PDF parsing should run outside the event loop, for example in a process pool.
+StreamingResponse sends output chunks incrementally. Server-Sent Events use event and data fields separated by a blank line.
+Lifespan initializes resources at startup and closes them at shutdown.
